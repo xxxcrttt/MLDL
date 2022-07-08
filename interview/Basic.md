@@ -50,6 +50,7 @@ Usually used as cost function in Classification.
 The ability of model to predict unknown data is usually called generalization ability. 
 
 ### Q6. Metrics 评估指标
+**混淆矩阵 Confusion Matrix**:    
 <img src='https://user-images.githubusercontent.com/56160038/178064120-2d8c833c-3d8f-4b0e-883a-a937e9d524eb.png' width='300' align=center />
 
 * **Accuracy**: $$ Accuracy = \frac{n_{correct}}{n_{total}} $$
@@ -57,24 +58,29 @@ The ability of model to predict unknown data is usually called generalization ab
 * **Recall**: $$ Recall = \frac{TP}{TP+FN} $$
 * **F1-Score**: harmonic mean of Precision and Recall, $$ {\rm F1} = \frac{2 \times precision \times recall}{precision + recall} $$ 
 * **ROC**: FPR to TPR,  $$ FPR = \frac{FP}{N} \ TPR = \frac{TP}{P} $$ 
+* **AUC**: Area Under Curve, ROC曲线下的面积, 取值一半在 0.5~1 之间
+<img src ='https://user-images.githubusercontent.com/56160038/178078824-2393eab7-949e-463b-83b6-5c1c9f521cfd.png' width='300' align=center />
+
+### Q7. Overfitting vs. Underfitting 
+* **Overfitting**: 过拟合, too many parameters, model predicts the known data well but poor predicts the unknow data. 
+Low Bias, High Variance 
+1. Increase the sample size: Data Augmentation 
+2. Simplified model: Dropout, Early Stopping, Tree Pruning
+3. L1, L2 Regularization or increase the penalty factor 
+4. Bagging or Bootstrapping 
+* **Underfitting**: 欠拟合, training is worse, model is too simple 
+High Bias, low Variance
+1. increase feature
+2. increase model complexity: increase the number of neurons in NN; increase number of layers; use Kernel function in SVM
+3. decrease the regularization factor 
+
+### Q8. Linear Model vs. Non-Linear Model 线性模型 / 非线性模型
+* Linear: Perceptron, Linear SVM, KNN, K-Means Clusering, LSA
+* Non-Linear: Kernel SVM, AdaBoost, Neuron Network 
 
 
-### Q1. What are the differences between supervised and unsupervised learning?   
-* supervised: input data is known and labeled, has a feedback mechanism, such as Logistic Regression, Decision Tree, SVM, Classification
-* unsupervised: unlabeled, such as clustering -- K-means clustering, hierarchical clustering
 
-### Q2. How is logistic regression done? 
-LR is a generalized linear model, it measures the relationship between the **dependent variable(label)** and one or more **independent variables(features)** by estimating probability 
-using its underlying **logistic function(sigmoid)**. 
-![image](https://user-images.githubusercontent.com/56160038/178021106-071690b2-5a17-46a5-8dfb-4ec3c7f56f6f.png)
 
-### Q3. Decision Tree
-1. input: entire dataset 
-2. calculate **entropy** of the target variable
-3. calculate **information gain** of all attributes
-4. choose the attribute with the highest information gain as the **root**
-5. repeat the same procedure on every branch until the decision node is finalized 
-生成算法: ID3, C4.5, C5.0 
 
-### Q4. Random Forest 
-It is build up of a number of Decision Trees, 
+
+
