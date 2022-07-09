@@ -62,6 +62,7 @@ The ability of model to predict unknown data is usually called generalization ab
 <img src ='https://user-images.githubusercontent.com/56160038/178078824-2393eab7-949e-463b-83b6-5c1c9f521cfd.png' width='300' align=center />
 
 ### Q7. Overfitting vs. Underfitting 
+### Trade-off between Bias and Variance 
 * **Overfitting**: 过拟合, too many parameters, model predicts the known data well but poor predicts the unknow data. 
 Low Bias, High Variance 
 1. Increase the sample size: Data Augmentation 
@@ -111,6 +112,30 @@ What output Y should be predicted for a given input X.
 * **Filter Methods**: ```LDA(Linear Discrimination Analysis), ANOVA(Analysis of Variance), Chi-Square```
 * **Wrapper Methods**: ```Forward Selection, Backward Selection, Recursive Feature Elimination```
 
-### Q15. Dimensionality reduction 降维
+### Q15. Dimensionality reduction 降维 / curse of dimensionality
+* Manual Feature Selection 手动筛选特征
+* Principal Component Analysis (PCA)
+* Multidimensional Scaling (多维度标)
+* Locally linear embedding 
+
+### Q16. Gradient Descent 梯度下降
+是迭代法(Iterative Method)的一种, 可以用于解决最小二乘问题(Least Square Problem), 可求解ML的模型参数.    
+在求解损失函数的最小值时通过梯度下降来迭代求解, 得到最小化的损失函数和模型参数.    
+```随机梯度下降(stochastic gradient descent，SGD) & 批量梯度下降(Batch GD)```   
+
+It is an **optimization algorithm** used to find the values of parameters of a function that minimizes a **cost** function.   
+It is best used when the parameters cannot be calculated analytically(eg: using linear algebra) and must be searched for by an optimizer algorithm. 
+
+### Q17. Regularization 正则化
+A technique that discourage learning a more complex or flexible model, to avoid the risk of overfitting.   
+防止过拟合, 在损失函数上加上某些规则(限制), 缩小解空间, 从而减少求出拟合解的可能性    
+* **L1/Lasso**: 绝对值, the L1 penalty can force the coefficient estimates to be 0. Performs variavle selection
+* **L2/Ridge**: 最小二乘, the coefficients is very close to 0 but never equal to 0. == include all the parameters 
+
+### Q18. PCA 主成分分析
+利用正交变换对一系列可能相关的变量的观测值进行线性变换, 从而投影为一系列线性不相关变量的值, 即为主成分。    
+* A sequence of p unit vectors, where the i-th vector is the direction of a line that best fits the data while being orthogonal to the first i-1 vectors.
+* Different individual dimensions of the data are linear uncorrelated. 
+* When many of the variables are highly correlated, and PCA is used to reduce their number to an independent set. 
 
 
