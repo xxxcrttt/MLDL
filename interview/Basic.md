@@ -75,28 +75,30 @@ High Bias, low Variance
 3. decrease the regularization factor 
 
 ### Q8. Linear Model vs. Non-Linear Model 线性模型 / 非线性模型
-* **Linear**: Perceptron, Linear SVM, KNN, K-Means Clusering, LSA
-* **Non-Linear**: Kernel SVM, AdaBoost, Neuron Network 
+* **Linear**: ```Perceptron, Linear SVM, KNN, K-Means Clusering, LSA```
+* **Non-Linear**: ```Kernel SVM, AdaBoost, Neuron Network```
 
 ### Q9. Generative Approach vs. Discriminative Approach 生成模型 / 判别模型
 监督学习的模型一般形式为决策函数(decision function): ```Y=f(x)``` 或条件概率分布(conditional prob. distribution)```P(Y|X)```.     
 * **生成模型**: 数据学习联合概率分布```P(X,Y)```求出条件概率分布```P(Y|X)```作为预测模型:  $$ P(Y|X) = \frac{P(X,Y)}{P(X)} $$    
 A model represents a generative relationship given an input X, produces an output Y.    
-朴素贝叶斯(Naive Bayes), 隐马尔科夫模型(Hidden Markov Model)
+```朴素贝叶斯(Naive Bayes), 隐马尔科夫模型(Hidden Markov Model)```
 * **判别模型**: 数据直接学习决策函数```f(x)```或者条件概率分布```P(Y|X)```作为预测模型    
 What output Y should be predicted for a given input X.   
-KNN, Perceptron, Decision Tree, Logistic Regression, SVM, CRF(conditional random field)
+```KNN, Perceptron, Decision Tree, Logistic Regression, SVM, CRF(conditional random field)```
 
 ### Q10. Probability 概率模型 vs. 非概率模型  
-* **概率模型**: 一定能表示为联合概率分布(Joint Prob.Distribution) -- 生成模型, Decision Tree, Naive Bayes, HMM, CRF, Gaussian Mixture Model
-* **非概率模型**: 判别模型, Perceptron, SVM, KNN, AdaBoost, KMeans, Neuron Networks
+* **概率模型**: 一定能表示为联合概率分布(Joint Prob.Distribution) -- 生成模型, ```Decision Tree, Naive Bayes, HMM, CRF, Gaussian Mixture Model```
+* **非概率模型**: 判别模型, ```Perceptron, SVM, KNN, AdaBoost, KMeans, Neuron Networks```
 
 ### Q11. Parametric 参数化 vs. 非参数化  
-* **参数化**: 假设模型参数维度固定(有限), Perceptron, Naive Bayes, Logistic Regression, KNN, Gaussian Mixture Model
-* **非参数化**: 维度不固定, 随着训练数据量增加而增大, Decision Tree, SVM, AdaBoost, KMeans
+* **参数化**: 假设模型参数维度固定(有限), Perceptron, Naive Bayes, Logistic Regression, ```KNN, Gaussian Mixture Model```
+* **非参数化**: 维度不固定, 随着训练数据量增加而增大, ```Decision Tree, SVM, AdaBoost, KMeans```
 
-
-
+### Q12. Supervised Learning vs. Unsupervised Learning vs. Reinforcement Learning 
+* **Supervised**: known and labeled data, has feedback mechanism. ```Decision Tree, Logistic Regression, SVM```
+* **Unsupervised**: unlabeled data, ```K-means clustering, PCA, ICA```
+* **Reinforcement**: reward from environment ```Game Theory, Cybernetics, Operations Research, information theory```
 
 
 
