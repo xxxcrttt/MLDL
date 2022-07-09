@@ -68,6 +68,8 @@ Low Bias, High Variance
 2. Simplified model: Dropout, Early Stopping, Tree Pruning
 3. L1, L2 Regularization or increase the penalty factor 
 4. Bagging or Bootstrapping 
+5. Use cross-validation 
+
 * **Underfitting**: 欠拟合, training is worse, model is too simple 
 High Bias, low Variance
 1. increase feature
@@ -100,5 +102,15 @@ What output Y should be predicted for a given input X.
 * **Unsupervised**: unlabeled data, ```K-means clustering, PCA, ICA```
 * **Reinforcement**: reward from environment ```Game Theory, Cybernetics, Operations Research, information theory```
 
+### Q13. Univariate(单变量), bivariate(双变量) and multivariate(多变量) analysis 
+* **Univariate**: one variable, describe the data and find the patterns that exist within it. 
+* **Bivariate**: two variables, deals with causes and relationships between these 2 variables
+* **Multivarite**: categorized under multivariate, with more than one dependent variable. 
+
+### Q14. Feature Selection Methods 
+* **Filter Methods**: ```LDA(Linear Discrimination Analysis), ANOVA(Analysis of Variance), Chi-Square```
+* **Wrapper Methods**: ```Forward Selection, Backward Selection, Recursive Feature Elimination```
+
+### Q15. Dimensionality reduction 降维
 
 
