@@ -132,7 +132,12 @@ A technique that discourage learning a more complex or flexible model, to avoid 
 * **L1/Lasso**: 绝对值, the L1 penalty can force the coefficient estimates to be 0. Performs variavle selection
 * **L2/Ridge**: 最小二乘, the coefficients is very close to 0 but never equal to 0. == include all the parameters 
 
-### Q18. PCA 主成分分析
+### Q18. Normalization 归一化
+A very important **preprocessing** step, used to **rescale** values to fit in a specific range to assure better convergence during ackpropagation.    
+The data normalization makes all features weighted equally.    
+用于重新调整数值以适应特定范围，确保在反向传播期间能更好的收敛. 数据归一化使得所有特征权重相等
+
+### Q19. PCA 主成分分析
 利用正交变换对一系列可能相关的变量的观测值进行线性变换, 从而投影为一系列线性不相关变量的值, 即为主成分。    
 * A sequence of p unit vectors, where the i-th vector is the direction of a line that best fits the data while being orthogonal to the first i-1 vectors.
 * Different individual dimensions of the data are linear uncorrelated. 
