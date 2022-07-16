@@ -53,7 +53,7 @@ The ability of model to predict unknown data is usually called generalization ab
 **混淆矩阵 Confusion Matrix**:    
 <img src='https://user-images.githubusercontent.com/56160038/178064120-2d8c833c-3d8f-4b0e-883a-a937e9d524eb.png' width='300' align=center />
 
-* **Accuracy**: $$ Accuracy = \frac{n_{correct}}{n_{total}} $$
+* **Accuracy**: $$ Accuracy = \frac{n_{correct}}{n_{total}} $$ 
 * **Precision**: $$ Precision = \frac{TP}{TP+FP} $$
 * **Recall**: $$ Recall = \frac{TP}{TP+FN} $$
 * **F1-Score**: harmonic mean of Precision and Recall, $$ {\rm F1} = \frac{2 \times precision \times recall}{precision + recall} $$ 
@@ -62,7 +62,9 @@ The ability of model to predict unknown data is usually called generalization ab
 <img src ='https://user-images.githubusercontent.com/56160038/178078824-2393eab7-949e-463b-83b6-5c1c9f521cfd.png' width='300' align=center />
 
 ### Q7. Overfitting vs. Underfitting 
-### Trade-off between Bias and Variance 
+#### Trade-off between Bias and Variance 
+* **Bias**: 模型预测值与真实值的差异 -- 模型简单，导致欠拟合
+* **Variance**: 不同训练数据训练的模型的预测值之间的差异 -- 模型过于复杂，过拟合
 * **Overfitting**: 过拟合, too many parameters, model predicts the known data well but poor predicts the unknow data. 
 Low Bias, High Variance 
 1. Increase the sample size: Data Augmentation 
@@ -99,6 +101,7 @@ What output Y should be predicted for a given input X.
 * **非参数化**: 维度不固定, 随着训练数据量增加而增大, ```Decision Tree, SVM, AdaBoost, KMeans```
 
 ### Q12. Supervised Learning vs. Unsupervised Learning vs. Reinforcement Learning 
+### 监督学习 vs 非监督学习 vs 强化学习
 * **Supervised**: known and labeled data, has feedback mechanism. ```Decision Tree, Logistic Regression, SVM```
 * **Unsupervised**: unlabeled data, ```K-means clustering, PCA, ICA```
 * **Reinforcement**: reward from environment ```Game Theory, Cybernetics, Operations Research, information theory```
@@ -113,6 +116,8 @@ What output Y should be predicted for a given input X.
 * **Wrapper Methods**: ```Forward Selection, Backward Selection, Recursive Feature Elimination```
 
 ### Q15. Dimensionality reduction 降维 / curse of dimensionality
+Dimensionality reduction refers to the process of converting a vast dimension dataset into data with fewer dimensions to convey similar information.     
+This reduction helps in compressing data and reducing storage space, less computing, removes redundant features. 
 * Manual Feature Selection 手动筛选特征
 * Principal Component Analysis (PCA)
 * Multidimensional Scaling (多维度标)
@@ -142,5 +147,18 @@ The data normalization makes all features weighted equally.
 * A sequence of p unit vectors, where the i-th vector is the direction of a line that best fits the data while being orthogonal to the first i-1 vectors.
 * Different individual dimensions of the data are linear uncorrelated. 
 * When many of the variables are highly correlated, and PCA is used to reduce their number to an independent set. 
+
+### Q20. Distance
+* **L1 Distance/Manhattan**: ```d(x, y) = |x1 - x2| + |y1 - y2|```
+* **L2 Distance/Euclidiean**: ```d(x, y) = sqrt((x1 - y1)^2 + (x2 - y3)^2 + ... + (xn - yn)^2)```
+
+### Q21. How should you maintain a deployed model?
+Monitor + Evaluate + Compare + Rebuild.
+
+### Q22. KNN vs. K-Means CLustering 
+both need to calculate the distance between samples 
+* **KNN**: K Nearest Neighbour, supervised learning, need labeled data, 统计它附近最近的K个样本并将其划分到最多的类别中
+* **K-Means**: unsupervised learning, 将数据分成K组，随机选择K个对象作为初始聚类的中心，然后计算每个对象与各个中心之间的距离，将它分入最近的聚类中。
+
 
 
