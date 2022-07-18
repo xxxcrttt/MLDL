@@ -10,3 +10,7 @@ Bayes Theorem would tell the **posterior** probability based on **prior** knowle
 假设: 特征之间是相互独立的 -- 计算条件概率时可以简化成条件概率乘积    
 Variables are i.i.d (independent and identically distributed)
 
+### Q3. Probability vs. Likelihood 概率和似然
+* 概率: 描述了已知参数时的随机变量的输出结果；describe the output of random variables when the parameters are known.
+* 似然: 描述已知随机变量输出结果时，未知参数的可能取值。describe the possible values of an unknown parameter when the output of a known random variable is described. 
+
