@@ -99,6 +99,14 @@ Their purpose is to reduce the amount of code required for the query, saving tim
 1. **Normalization**: the process of dividing data into tables to remove redundant data and improve data integrity
 2. **Denormalization**: used to combine multiple tables in order to reduce the time required to perform queries. 
 
+### types of normalization 
+1. *1st Normal Form*: ensure rows and columns always contain singular, unique values
+2. *2nd NF*: remove all partial dependencies
+3. *3rd NF*: remove all transitive functional dependencies
+4. *4th / Boyce-Codd NF*: ensure all functions dependencies are a super key to the table 
+5. *5th NF*: ensure decomposition doesn’t result in any loss of data
+6. *6th NF*: decompose the relation variables into irreducible components
+
 ## Q11. cursor 光标
 The cursor allows users to process data from a result set, one row at a time.
 
@@ -131,6 +139,41 @@ MOD function can be used in most RDBMS as part of the **WHERE** in a select quer
 ## Q17. how to delete a column? 
 1. ```ALTER TABLE name``` to select the table with the column want to delete 
 2. ```DROP COLUMN name``` 
+
+## Q18. aggregate function 
+Aggregate functions are used to perform calculations on a set of values to return a single value. 
+
+```AVG, COUNT, MIN, MAX, SUM```
+
+## Q19. schema
+A schema refers to a collection of database objects -- tables, functions, indexes, and procedures -- associated with a databse. 
+
+The schema helps segragate database objects for different applications and access rights; 
+
+## Q20. scalar function 
+Scalar functions are user-defined functions applied to a set of data to return a single value. 
+
+```UCASE, LCASE, MID, ROUND, NOW```
+
+## Q21. SQL injections
+An SQL injection is a type of cyber attack in which hackers insert malicious SQL code into the database to gain access to potentially valuable or sensitive information -- for web applications that use an SQL-based database.   
+
+It's possible to prevent SQL injections by creating multiple database accounts to limit access or by using a 3rd-party web aaplication firewall. 
+
+## Q22. how can SQL queries be optimized? 
+* Specify particular columns with *SELECT* rather than *SELECT**
+* Make joins with *INNER JOIN* rather than *WHERE*
+* Define filters using *WHERE* rather than *HAVING*
+* Avoid looping statements in the query structure 
+* Avoid correlated subqueries 
+
+## Q23. ACID properties 
+ACID: Atomicity, Consistency, Isolation, Durability 
+* **Atomicity**: Changes to data are performed as a single, unified operation
+* **Consistency**: Data values are consistent at the start and end of the transaction
+* **Isolation**: The intermediate state of a transaction is hidden from other transactions
+* **Durability**: Changes to data remain the same after the transaction is completed
+
 
 
 
