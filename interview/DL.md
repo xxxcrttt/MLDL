@@ -26,3 +26,9 @@ The same feature is detected no matter where the target appears in the image.
 While maximum pooling returns the maximum value of the receptive field. If the maximum value if translation but still in the receptive filed, the pooling layer will output the same value. 
 
 ### Q4. Max-pooling in Classification CNN. 
+
+
+### Q5. Fourier Transformation 傅里叶变换
+一个满足某些条件的函数可以表示成三角函数或他们的积分形式的线性组合。   
+A mathematical transform that decomposes functions depending on *space or time* into functions depending on *spatial frequency or temporal frequency*.
+
