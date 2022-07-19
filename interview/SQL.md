@@ -155,7 +155,7 @@ Cursors are an alternative to commands, which operate on all rows in a result se
 3. ```implicit``` are less efficient and more error-prone compared to ```explicit```
 
 ## Q12. Collation Sensitivity 敏感性
-Collation refers to a set of rules or conditions that influence how data is stored and ordered. 
+Collation refers to a set of rules or conditions that determine how data is stored and ordered. 
 1. **Case**: Uppercase & lowercase characrers. 
 2. **Accent**: accented & unaccented
 3. **Width**: full-width & half-width 
@@ -176,7 +176,8 @@ common clauses used with SELECT:
 
 ## Q15. DELETE vs. TRUNCATE vs. DROP 
 1. **DELETE**: a DML command, removes records and recods each deletion in the transaction log,
-2. **TRUNCATE**: a DDL command, delete all the row from the table 
+2. **TRUNCATE**: a DDL command, delete all the row from the table and free the space 
+3. **DROP**: remove an object from the database, all the rows are deleted and the table structure is removed from the DB.  
 
 ## Q16. how to copy data from one table to another? 
 1. use ```INSERT INTO``` and specify the destination as the *new table*
@@ -197,25 +198,26 @@ common clauses used with SELECT:
 2. ```SELECT DISTINCT```
 3. ```NOT EXISTS / NOT IN ```
 
-## Q18. aggregate function 
+## Q18. Aggregate function 
 Aggregate functions are used to perform calculations on a set of values to return a single value. 
 
-```AVG, COUNT, MIN, MAX, SUM```
+```AVG, COUNT, MIN, MAX, SUM, FIRST, LAST```
+
+## Q20. Scalar function 
+Scalar functions are user-defined functions applied to a set of data to return a single value. 
+
+```LEN, UCASE, LCASE, MID, ROUND, RAND, NOW, FORMAT```
+
 
 ## Q. UNION, MINUS, INTERSECT 
 * **UNION**: combines and returns the result-set retrived by 2 or more ```SELECT```.
 * **MINUS**: used to removed duplicates from the result-set. 
 * **INTERSECT**: combines the result-set fetched by the 2 ```SELECT``` statement, 
 
-## Q19. schema
+## Q19. Schema
 A schema refers to a collection of database objects -- tables, functions, indexes, and procedures -- associated with a databse. 
 
 The schema helps segragate database objects for different applications and access rights; 
-
-## Q20. scalar function 
-Scalar functions are user-defined functions applied to a set of data to return a single value. 
-
-```UCASE, LCASE, MID, ROUND, NOW```
 
 ## Q21. SQL injections
 An SQL injection is a type of cyber attack in which hackers insert malicious SQL code into the database to gain access to potentially valuable or sensitive information -- for web applications that use an SQL-based database.   
@@ -243,6 +245,11 @@ Stored procedures are chunks of SQL code that can be saved and reused.
 * **Temporary sp**: procedures that are dropped when the session is closed
 * **remote**: created and stored on remote server 
 
+### Recursive Stroed Procedure
+A SP that calls itself until a boundary condition is reached. The recursive function helps to deploy the same set of code 
+several times. 
+
+
 ## Q25. trigger with SQL 
 A trigger is a type of sp that runs when a specific event occurs. 
 
@@ -257,7 +264,7 @@ Some RDBMS systems use ```CREATE TRIGGER```, while others require the user to na
 Encryption: create a master key, use symmetric encryption, create a certificate protected by the master key 
 
 ## Q28. OLTP vs. OLAP 
-* **OLTP**: online transaction processing -- capture, store, update data regularly 
+* **OLTP**: online transaction processing -- capture, store, update data regularly, maintain concurrency, often decentralized
 * **OLAP**: online analytical processing -- used to query and perform analysis 
 
 ## Q29. dynamic SQL 
@@ -268,3 +275,17 @@ It is more challenging and less efficient than static SQL, but it allows develop
 ## Q31. Entites and Relationships 
 * **Entities**: can be real-world object, either tangible or intangible that can be easily identifiable. 
 * **Relationships**: 
+
+## Q32. User-defined function 
+1. Scalar function: return a single scalar value 
+2. Table-valued function: returns a table,    
+**inline** -- based on a single SELECT statement, **Multi-statement** -- returns a tabular result-set 
+
+## Q33. Pattern Matching in SQL
+* ```WHERE first_name LIKE 'K%'```
+* ```WHERE first_name NOT LIKE 'K%'```
+* ```WHERE first_name LIKE '%Q%'```
+* ```WHERE first_name LIKE '__K%'``` -- _ matches exactly 1 char.
+
+
+
