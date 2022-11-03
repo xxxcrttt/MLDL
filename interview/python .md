@@ -11,7 +11,16 @@
 * **functions**: first-class objects, can be assigned to variables, return from and pass into another function. 
 
 ### Q3. What is PEP 8?
-PEP: Python Enhancement Proposal. Its a set of rules that specify how to format python code for maximum readability. 
+PEP: Python Enhancement Proposal. Its a set of rules that specify how to format python code for maximum readability.   
+Generally recognized style guide for programming in Python. 
+
+### Q. pip & Pypi
+Pip is a Python Package management system. It provides installing and versioning.    
+PyPi -- Python Package Index 
+
+### Q. virtualenvs 
+It is an isolated environment for development, running, debugging Python code.   
+It is used to isolate a Python interpreter together with libraries and settings. 
 
 ### Q4. list vs tuples? 
 **list**: mutable -- which can be edited, slower than tuples, []
@@ -112,7 +121,14 @@ print(a(5,6))
 ### Q22. self 
 Self is an instance or an object of class. This is explicitly included as the first parameter.   
 (Not in Java but only in Python)    
-It helps to differentiate between the methods and attributes of a class with local variable. 
+It helps to differentiate between the methods and attributes of a class with local variable.
+
+### Q. Special Methods 
+1. ```_init_```: constructor 
+2. ```_str_, _repr_```: object representation (casting to string, printing)
+3. ```_len_, _next_```: generators
+4. ```_enter_, _exit_```: context managers
+5. ```_eq_, _it_, _gt_```: operator overloading 
 
 ### Q23. Break, Continue and Pass
 * **Break**: allows loop termination when some condition is met and the control is transferred to the next statement. 
@@ -174,6 +190,12 @@ normalvariate(mean,sdev): -- normal distribution
 * **help()**: used to display the documentation string like modules, keywords, attributes
 * **dir()**: used to display the defined symbols 
 
+### Q. introspection/reflection 自省
+The ability to examine an object at runtime. 
+* ```dir()```: examing the attributes of an object 
+* ```type()```: check the object type 
+* ```isinstance()```: 
+
 ### Q35. dictionary 
 The built-in datatypes in Python, defines one-to-one relationship, (key,value) pair. 
 
@@ -219,6 +241,9 @@ pop(), remove()
 ### Q44. OOP concepts 
 Python is an OOP language, any program can be solved in python by creating an object model
 
+### Q.OOP doesn't support true private attributes/ methods, limitation? 
+There is a convention if we prefix the name with an underscore, it's considered private. 
+
 ### Q45. deep & shallow copy 
 1. **shallow copy**: used when a new instance type gets created and it keeps the value that are copied in the new instance 
 2. **Deep copy**: used to store the values that are already copied. It doesnt copy the reference pointers to the objects. 
@@ -242,8 +267,10 @@ Inheritance allows One class to gain all the attributes and methods of another c
 3. hierarchical -- from one base class you can inherit any number of child class
 4. multiple -- a derived class is inherited from more than one base class. 
 
-### Q50. class
-```class``` keyword 
+### Q50. class & metaclass
+```class``` keyword    
+Everything is an object, including classes, and classes are instances of something. A default metaclass is **type**.
+
 
 ### Q51. monkey patching 猴补丁
 only refers to dynamic modifications of a class or module at run-time. 
