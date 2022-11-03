@@ -329,5 +329,16 @@ df.drop()
 df.drop_duplicates()
 ```
 
+### Q. XOR in Python 
+```
+1. (a and not b) or (not a and b)
+2. bool(a) != bool(b)
+3. bool(a)^bool(b)
+4. from operator import xor
+   xor(bool(a), bool(b))
+```
+
+
+
 
 
