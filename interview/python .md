@@ -24,7 +24,8 @@ it is used to make sure that names are unique to avoid naming conflicts.
 
 ### Q6. decorators? @ 
 Decorators are used to add some design patterns to a function without changing its structure.     
-They are generally defined before the function they are enhancing. 
+They are generally defined before the function they are enhancing.    
+Decorators can be used to check for permissions, modify or track the arguments passed to a methosd, logging the class to a specific method. 
 
 ### Q7. dict and list comprehension? 
 ```Python
@@ -132,6 +133,9 @@ arr[::-1]
 ```Python 
 random.shuffle()
 ```
+
+### Q. generator 
+A generator is a callable object that acts as an iterable. 
 
 ### Q26. iterators
 Iterators are objects which can be traversed though or iterated upon. 
