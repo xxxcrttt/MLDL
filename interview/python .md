@@ -37,6 +37,16 @@ x = [i : i+2 for i in range(5)]
 ------
 [0:2,1:3,2:4,3:5,4:6]
 ```
+```Python 
+# print the odd numbers btw 0 & 100
+x = [a for a in range(0,100) if a%2]
+```
+
+
+**dict**: like hash map    
+it stores (key,value) pair, where keys are unique and has O(1) access time.    
+Limitation: the keys must be hashable, they cant be changed.
+
 
 ### Q8. common built-in datatypes
 **Numbers(integer, floating-point, complex), list, tuple, string, set, dictionary, boolean**
@@ -84,6 +94,9 @@ a block of code which is executed only when it is called ```def```
 ### Q20. _init_
 a method/constructor to automatically called to allocate memory when a new object/instance of a class is created.    
 All classes have the _init_ method. 
+
+### Q. _call_
+A callable is an object that can be called, function or an object implementing the _call_ special methods. Any object can be made callable. 
 
 ### Q21. Lambda function 
 An anonymous function is known as a lambda function.    
